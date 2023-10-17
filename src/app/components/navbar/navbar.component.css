@@ -1,0 +1,42 @@
+/* Estilos para la barra de navegación */
+.my-navbar {
+  background-color: #b700ff; /* Cambia el color de fondo a negro */
+  font-family: "Roboto", sans-serif; /* Usa la fuente Roboto */
+  padding: 10px 20px; /* Añade espacio alrededor del contenido de la barra de navegación */
+}
+
+.my-navbar ul {
+  list-style-type: none; /* Quita los puntos de lista */
+  padding: 0;
+  display: flex; /* Muestra los elementos de la lista en línea */
+  justify-content: space-between; /* Distribuye los elementos de la lista uniformemente */
+}
+
+.my-navbar li {
+  margin: 0 10px; /* Añade espacio entre los elementos de la lista */
+}
+
+.my-navbar button {
+  background: none;
+  border: none;
+  color: #fff; /* Cambia el color del texto a blanco */
+  cursor: pointer;
+  font-size: 16px; /* Tamaño de fuente */
+  text-decoration: none; /* Quita cualquier subrayado en los botones */
+}
+
+.my-navbar button:hover {
+  text-decoration: underline; /* Subraya los botones al pasar el ratón por encima */
+}
+
+/* Estilos para hacer la barra de navegación responsive */
+@media (max-width: 767px) {
+  .my-navbar ul {
+    flex-direction: column; /* Apila los elementos de la lista en pantallas pequeñas */
+    align-items: center; /* Centra los elementos de la lista verticalmente */
+  }
+
+  .my-navbar li {
+    margin: 10px 0; /* Añade espacio vertical entre los elementos de la lista */
+  }
+}

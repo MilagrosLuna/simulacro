@@ -1,0 +1,18 @@
+<div class="actores-list">
+    <div class="cards">
+      <div
+        class="card"
+        *ngFor="let actor of actores"
+        [class.selected]="actor === selectedActor"
+        (click)="selectActor(actor)"
+      >
+        <!-- Agrega una imagen aquí si lo deseas -->
+        <div>
+          <h3>{{ actor.nombre }} {{ actor.apellido }}</h3>
+          <p>Edad: {{ actor.edad }}</p>
+          <p>País: {{ actor.pais }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

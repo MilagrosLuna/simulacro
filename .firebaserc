@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "simulacroparcial-87044": {
+      "hosting": {
+        "practicaParcial": [
+          "simulacroparcial-87044"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "simulacroparcial-87044"
+  }
+}

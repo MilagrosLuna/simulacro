@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "Pelicula 1",
+    "tipo": "Terror",
+    "fechaEstreno": "2023-01-15",
+    "cantidadPublico": 1000,
+    "fotoPelicula": "imagen1.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Pelicula 2",
+    "tipo": "Comedia",
+    "fechaEstreno": "2023-02-20",
+    "cantidadPublico": 800,
+    "fotoPelicula": "imagen2.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Pelicula 3",
+    "tipo": "Amor",
+    "fechaEstreno": "2023-03-25",
+    "cantidadPublico": 1200,
+    "fotoPelicula": "imagen3.jpg"
+  }
+]

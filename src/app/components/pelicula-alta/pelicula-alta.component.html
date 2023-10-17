@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="alta-pelicula-form">
+    <h2>Alta Películas</h2>
+    <form
+      (ngSubmit)="onSubmit()"
+      [formGroup]="form"
+      class="formulario"
+      enctype="multipart/form-data"
+    >
+
+    <div *ngIf="imagenURL">
+      <img [src]="imagenURL" alt="Imagen seleccionada" id="foto" class="image" />
+    </div>
+
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" formControlName="peliculaName" />
+      </div>
+
+
+      <div class="form-group">
+        <label for="tipo">Tipo:</label>
+            <div class="btn-group">
+              <label class="btn btn-secondary" [class.active]="form.value.tipo === 'Terror'">
+                <input type="radio" formControlName="tipo" value="Terror" /> Terror 
+              </label>
+              <label class="btn btn-secondary" [class.active]="form.value.tipo === 'Comedia'">
+                <input type="radio" formControlName="tipo" value="Comedia"> Comedia
+              </label>
+              <label class="btn btn-secondary" [class.active]="form.value.tipo === 'Accion'">
+                <input type="radio" formControlName="tipo" value="Accion"> Acción
+              </label>
+              <label class="btn btn-secondary" [class.active]="form.value.tipo === 'Aventuras'">
+                <input type="radio" formControlName="tipo" value="Aventuras"> Aventuras
+              </label>
+              <label class="btn btn-secondary" [class.active]="form.value.tipo === 'Romance'">
+                <input type="radio" formControlName="tipo" value="Romance"> Romance
+              </label>
+            </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="fechaEstreno">Fecha de Estreno:</label>
+        <input type="date" id="fechaEstreno" formControlName="fechaEstreno" />
+      </div>
+      <div class="form-group">
+        <label for="cantidadPublico">Cantidad de Público:</label>
+        <input
+          type="number"
+          id="cantidadPublico"
+          formControlName="cantidadPublico"
+        />
+      </div>
+      <div class="form-group">
+        <label for="selectedActor">Actor:</label>
+        <input
+          type="text"
+          id="selectedActor"
+          formControlName="selectedActor"
+          [value]="selectedActor ? selectedActor : ''"
+        />
+      </div>
+      <div class="form-group">
+        <label for="fotoPelicula">Foto de la Película:</label>
+        <input
+          type="file"
+          id="fotoPelicula"
+          formControlName="fotoPelicula"
+          (change)="onImageSelected($event)"
+          (click)="resetImageInput()"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Agregar Película</button>
+    </form>
+  </div>
+  <app-actor-listado (actorsData)="receiveActor($event)"></app-actor-listado>
+</div>

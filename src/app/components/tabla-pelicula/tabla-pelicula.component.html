@@ -1,0 +1,28 @@
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Tipo</th>
+      <th>Fecha de estreno</th>
+      <th>Cantidad de publico</th>
+      <th>Actor</th>
+      <th>Foto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pelicula of peliculas">
+      <td>{{ pelicula.nombre }}</td>
+      <td>{{ pelicula.tipo }}</td>
+      <td>{{ pelicula.fechaEstreno }}</td>
+      <td>{{ pelicula.cantidadPublico }}</td>
+      <td>{{ pelicula.actor }}</td>
+      <td>
+        <img
+          [src]="pelicula.fotoPelicula"
+          alt="{{ pelicula.nombre }}"
+          height="50"
+        />
+      </td>
+    </tr>
+  </tbody>
+</table>

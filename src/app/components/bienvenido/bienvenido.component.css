@@ -1,0 +1,50 @@
+/* bienvenida.component.css */
+.contenedor {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.fondo-gradiente {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.8;
+  background: linear-gradient(45deg, #ff5733, #3c4de5, #ff5733);
+  background-size: 200% 200%; /* Ajusta el tamaño del gradiente */
+}
+.contenido {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.titulo {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.descripcion {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.boton {
+  background-color: #ff5733;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px; /* Redondear el botón */
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.boton:hover {
+  background-color: #ff2b00;
+  transform: scale(1.05); /* Aumentar el tamaño del botón al pasar el ratón */
+}

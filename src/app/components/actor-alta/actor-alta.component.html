@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="alta-actor-form">
+    <h2>Alta de Actor</h2>
+    <form (ngSubmit)="onSubmit()" [formGroup]="form" class="formulario">
+      <div class="form-group">
+        <label for="actorName">Nombre del Actor:</label>
+        <input
+          type="text"
+          id="actorName"
+          placeholder="Nombre"
+          formControlName="actorName"
+        />
+        <div *ngIf="form.controls['actorName'].errors != null">
+          <small
+            class="invalid"
+            *ngIf="
+              form.controls['actorName'].errors!['required'] &&
+              form.controls['actorName'].touched
+            "
+            >Debe ingresar el nombre del actor..</small
+          >
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="actorLastName">Apellido del Actor:</label>
+        <input
+          type="text"
+          id="actorLastName"
+          placeholder="apellido"
+          formControlName="actorLastName"
+        />
+        <div *ngIf="form.controls['actorLastName'].errors != null">
+          <small
+            class="invalid"
+            *ngIf="
+              form.controls['actorLastName'].errors!['required'] &&
+              form.controls['actorLastName'].touched
+            "
+            >Debe ingresar el apellido del actor..</small
+          >
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="actorEdad">Edad del Actor:</label>
+        <input
+          type="text"
+          id="actorEdad"
+          placeholder="Nombre"
+          formControlName="actorEdad"
+        />
+        <div *ngIf="form.controls['actorEdad'].errors != null">
+          <small
+            class="invalid"
+            *ngIf="
+              form.controls['actorEdad'].errors!['required'] &&
+              form.controls['actorEdad'].touched
+            "
+            >Debe ingresar la edad del actor..</small
+          >
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="selectedCountry">País Seleccionado:</label>
+        <input
+          type="text"
+          id="selectedCountry"
+          formControlName="selectedCountry"
+          [value]="selectedCountry ? selectedCountry.name : ''"
+        />
+      </div>
+      <button type="submit">Guardar Actor</button>
+    </form>
+  </div>
+  <div class="app-tabla-paises">
+    <app-tabla-paises></app-tabla-paises>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.alta-pelicula-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.image{
+  width: 150px;
+}
+.alta-pelicula-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.alta-pelicula-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.alta-pelicula-form input[type="text"],
+.alta-pelicula-form input[type="date"],
+.alta-pelicula-form input[type="number"] {
+  width: 80%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.alta-pelicula-form input[type="text"]:focus,
+.alta-pelicula-form input[type="date"]:focus,
+.alta-pelicula-form input[type="number"]:focus {
+  border-color: #3f51b5;
+}
+
+.alta-pelicula-form button {
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.alta-pelicula-form button:hover {
+  background-color: #2a3e94;
+}

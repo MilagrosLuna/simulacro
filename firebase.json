@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "practicaParcial",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
